@@ -8,6 +8,10 @@ var availableNotes = [2000,500,100,20,10,5,1]
 
 function clickEventHandler(){
     hideMessage();
+    if (isNaN(bill.value)){
+        showMessage("Bill Amount should Number")
+    }
+    else{
     if(bill.value > 0){
         if(cash.value < bill.value){
             showMessage("Do you wanna wash plates ?")
@@ -19,7 +23,7 @@ function clickEventHandler(){
     }else {
         showMessage("Enter appropriate Bill Amount")
     }
-    
+}
 }
  
 function hideMessage(){
