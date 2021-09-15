@@ -6,7 +6,7 @@ const numberOfNotes = document.querySelectorAll(".no-of-notes")
 
 var availableNotes = [2000,500,100,20,10,5,1]
 
-function clickEventHandler(){
+btnCheck.addEventListener("click",function clickEventHandler(){
     hideMessage();
     if (isNaN(bill.value)){
         showMessage("Bill Amount should Number")
@@ -24,7 +24,7 @@ function clickEventHandler(){
         showMessage("Enter appropriate Bill Amount")
     }
 }
-}
+})
  
 function hideMessage(){
     message.style.display = "none";
@@ -44,4 +44,4 @@ function calculateChange(amount){
 
 }
 
-btnCheck.addEventListener("click",clickEventHandler)
+
