@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap');
 :root {
-    --primary-color: rgb(184, 17, 17);
+    --primary-color:#EF4444;
 }
 .container {
     display: flex;
