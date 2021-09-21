@@ -49,6 +49,7 @@ input {
  }
  #error-message{
      font-size: larger;
+     font-weight: bold;
  }
  #cash-return-table {
      border: 1px solid var(--primary-color);

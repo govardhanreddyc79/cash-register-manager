@@ -8,23 +8,29 @@ var availableNotes = [2000,500,100,20,10,5,1]
 
 btnCheck.addEventListener("click",function clickEventHandler(){
     hideMessage();
-    if (isNaN(bill.value)){
-        showMessage("Bill Amount should Number")
+    billAmount = Number(bill.value)
+    cashGiven = Number(cash.value)
+    if (billAmount != '' & cashGiven != '')
+    {
+        if(billAmount >0 & cashGiven >0){
+            if(cashGiven < billAmount){
+                showMessage("Do you wanna wash plates ?")
+            }else{
+                var amountLeft = cashGiven-billAmount
+                calculateChange(amountLeft)
+            }
+
+        }
+        else {
+            showMessage("The input values should be positive")
+            }
     }
     else{
-    if(bill.value > 0){
-        if(cash.value < bill.value){
-            showMessage("Do you wanna wash plates ?")
-        }else{
-            var amountLeft = cash.value-bill.value
-            calculateChange(amountLeft)
-        }
-
-    }else {
-        showMessage("Enter appropriate Bill Amount")
+        alert("Please fill out all Fields")
     }
-}
-})
+
+    }
+)
  
 function hideMessage(){
     message.style.display = "none";
