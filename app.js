@@ -8,18 +8,17 @@ var availableNotes = [2000,500,100,20,10,5,1]
 
 btnCheck.addEventListener("click",function clickEventHandler(){
     hideMessage();
-    billAmount = Number(bill.value)
-    cashGiven = Number(cash.value)
+    billAmount = bill.value
+    cashGiven = cash.value
     if (billAmount != '' & cashGiven != '')
     {
         if(billAmount >0 & cashGiven >0){
-            if(cashGiven < billAmount){
+            if(Number(cashGiven) < Number(billAmount)){
                 showMessage("Do you wanna wash plates ?")
             }else{
                 var amountLeft = cashGiven-billAmount
                 calculateChange(amountLeft)
             }
-
         }
         else {
             showMessage("The input values should be positive")
